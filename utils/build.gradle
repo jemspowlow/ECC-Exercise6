@@ -1,0 +1,7 @@
+plugins{
+	id "com.github.johnrengelman.shadow"
+}
+dependencies{
+		compile group: 'org.apache.commons', name: 'commons-rng-simple', version: '1.0'
+		
+}

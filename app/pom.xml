@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.jpm.tables</groupId>
+        <artifactId>exer6</artifactId>
+        <version>1.0</version>
+    </parent>
+    <artifactId>app</artifactId>
+    <packaging>jar</packaging>
+	<version>1.0</version>
+    <name>app</name>
+
+    <build>
+		<plugins>
+		  <plugin>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<executions>
+			  <execution>
+				<phase>package</phase>
+				<goals>
+				  <goal>single</goal>
+				</goals>
+			  </execution>
+			</executions>
+			<configuration>
+			  <archive>
+				<manifest>
+				  <addClasspath>true</addClasspath>
+				  <mainClass>app.App</mainClass>
+				</manifest>
+			  </archive>
+			  <descriptorRefs>
+				<descriptorRef>jar-with-dependencies</descriptorRef>
+			  </descriptorRefs>
+			</configuration>
+		  </plugin>
+  </plugins>
+    </build>
+    <!-- Dependencies -->  	
+    <dependencies>
+		<dependency>
+		  <groupId>com.jpm.tables</groupId>
+		  <artifactId>services</artifactId>
+		  <scope>compile</scope>
+		  <version>1.0</version>
+		</dependency>
+    </dependencies>
+    <!-- End of Dependencies-->
+</project>
